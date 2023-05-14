@@ -32,10 +32,10 @@ function Head(){
                 width={18}
                 height={18}/>
             </div>
-            <div className=" mt-[2%] ml-[5%]">
+            <div className=" mt-[2%] ml-[3%]">
                 <p className="text-[16px] font-normal">Log in</p>
             </div>
-            <div className="mt-[1.5%] ml-[5%] ">
+            <div className="mt-[1.5%] ml-[3%] ">
             <button class="bg-gradient-to-r from-[#0048FF] to-[#0096FF] text-white font-bold py-2 px-8 rounded-full">
              Join Now
             </button>
