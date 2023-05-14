@@ -2,7 +2,18 @@ import Head from "./header"
 import bg from "../../public/images/bg.png"
 import Image from "next/image";
 import { Checkbox } from "@material-tailwind/react";
-
+function case1(){
+    document.getElementById("evt").innerHTML="-₹18,321";
+    document.getElementById("evt1").innerHTML="₹179";
+}
+function case2(){
+    document.getElementById("evt").innerHTML="-₹18,351";
+    document.getElementById("evt1").innerHTML="₹149";
+}
+function case3(){
+    document.getElementById("evt").innerHTML="-₹18,401";
+    document.getElementById("evt1").innerHTML="₹99";
+}
 function Landing(){
     return(
         <div>
@@ -156,7 +167,7 @@ function Landing(){
                    <div className="flex flex-column justify-center mt-[3%] ">
                     <div>
                     
-                    <button className="hover:bg-[#d7eddd]">
+                    <button onClick={case1} className="hover:bg-[#d7eddd]">
                     
                     <div  className="border-2 border-solid  hover:border-[#47ba68] rounded-lg h-[70px] w-[390px]" >
                     <Image className="absolute ml-[14%]"
@@ -182,7 +193,7 @@ function Landing(){
 
                    <div className="flex flex-column justify-center mt-[3%]">
                     <div>
-                    <button className="hover:bg-[#d7eddd]">
+                    <button onClick={case2} className="hover:bg-[#d7eddd]">
                     <div  className="border-2  hover:border-[#47ba68] border-solid rounded-lg h-[70px] w-[390px]" >
                   <div class="mt-2 ">
                     <label class="inline-flex items-center">
@@ -204,7 +215,7 @@ function Landing(){
                    <div className="flex flex-column justify-center mt-[3%]">
                     <div>
                        
-                    <button className="hover:bg-[#d7eddd]">
+                    <button onClick={case3} className="hover:bg-[#d7eddd]">
                     <div  className="border-2 border-solid hover:border-[#47ba68] rounded-lg h-[70px] w-[390px]" >
                   <div class="mt-2 ">
                     <label class="inline-flex items-center">
@@ -233,7 +244,7 @@ function Landing(){
                    <div className="flex justify-center items-center mt-[3%]">
                    <div  className="border-2 border-solid bg-gradient-to-r  from-[#f9dcd1] to-[#fce8d9] border-[#ec7c37] rounded-lg h-[70px] w-[390px]" >
                    <div className="mt-[2%] flex items-center justify-center space-x-[170px]">
-                    <p className="text-[16px] font-abc font-semibold text-[#DE4313]">Limited time offer</p><span  className="font-semibold text-[16px] font-abc text-[#3C4852]">-₹18,401</span>
+                    <p className="text-[16px] font-abc font-semibold text-[#DE4313]">Limited time offer</p><span id="evt" className="font-semibold text-[16px] font-abc text-[#3C4852]">-₹18,500</span>
                    </div>
                    <div className="flex items-center justify-center">
                     <Image className="ml-[-35%]"
@@ -246,7 +257,7 @@ function Landing(){
                    </div>
                    {/* next section */}
                    <div className="mt-[2%] flex items-center justify-center space-x-[160px]">
-                    <p className="text-[16px] font-abc text-[#3C4852]"><b>Total</b>(Incl. of 18% GST)</p><span className="text-[24px] font-abc font-semibold text-[#3C4852]">₹149</span>
+                    <p className="text-[16px] font-abc text-[#3C4852]"><b>Total</b>(Incl. of 18% GST)</p><span id="evt1" className="text-[24px] font-abc font-semibold text-[#3C4852]">₹149</span>
                    </div>
                    {/* next section */}
                    <div className="flex flex-row justify-center items-center mt-[3%] space-x-2">
