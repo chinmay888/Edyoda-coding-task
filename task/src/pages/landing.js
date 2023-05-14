@@ -1,4 +1,5 @@
 import Head from "./header"
+import React from "react";
 import bg from "../../public/images/bg.png"
 import Image from "next/image";
 import { Checkbox } from "@material-tailwind/react";
@@ -14,7 +15,9 @@ function case3(){
     document.getElementById("evt").innerHTML="-₹18,401";
     document.getElementById("evt1").innerHTML="₹99";
 }
+
 function Landing(){
+    const [one, setOne] = React.useState("onlyone");
     return(
         <div>
             <div>
@@ -176,7 +179,7 @@ function Landing(){
                         height={16}/>
                   <div class="mt-2 ">
                     <label class="inline-flex items-center">
-                     <input type="checkbox" class="w-6 h-6 mt-[3.5%] rounded-full"  />
+                     <input checked={one === "onlyone"} onChange={()=> setOne("onlyone")} type="checkbox" class="w-6 h-6 mt-[3.5%] rounded-full"  />
                      <span class="ml-[20px] mt-[3.5%] w-[110%]"><p className="text-[#3C4852] text-[16px] font-abc font-semibold">12 Months Subscription Plan</p></span>
                      <span className="ml-[30px] mt-[1%] text-[#3C4852] font-abc text-[12px]">Total</span><span className="text-[#3C4852] mt-[1px%] ml-[10px] font-abc text-[16px] font-semibold">₹179</span><br></br>
                      
@@ -197,7 +200,7 @@ function Landing(){
                     <div  className="border-2  hover:border-[#47ba68] border-solid rounded-lg h-[70px] w-[390px]" >
                   <div class="mt-2 ">
                     <label class="inline-flex items-center">
-                     <input type="checkbox" class="accent-[#] w-6 h-6 mt-[3.5%] rounded-full"  />
+                     <input checked={one === "onlytwo"} onChange={()=> setOne("onlytwo")} type="checkbox" class="accent-[#] w-6 h-6 mt-[3.5%] rounded-full"  />
                      <span class="ml-[20px] mt-[3.5%] w-[110%]"><p className="text-[#3C4852] text-[16px] font-abc font-semibold">6 Months Subscription Plan</p></span>
                      <span className="ml-[38px] mt-[1%] text-[#3C4852] font-abc text-[12px]">Total</span><span className="text-[#3C4852] ml-[10px] mt-[1px%] font-abc text-[16px] font-semibold">₹149</span><br></br>
                      
@@ -219,7 +222,7 @@ function Landing(){
                     <div  className="border-2 border-solid hover:border-[#47ba68] rounded-lg h-[70px] w-[390px]" >
                   <div class="mt-2 ">
                     <label class="inline-flex items-center">
-                     <input type="checkbox" class="w-6 ml-[-1%] h-6 mt-[3.5%] rounded-full"  />
+                     <input checked={one === "onlythree"} onChange={()=> setOne("onlythree")} type="checkbox" class="w-6 ml-[-1%] h-6 mt-[3.5%] rounded-full"  />
                      <span class="ml-[20px] mt-[3.5%] w-[110%]"><p className="ml-[-1%] text-[#3C4852] text-[16px] font-abc font-semibold">3 Months Subscription Plan</p></span>
                      <span className="ml-[38px] mt-[1%] text-[#3C4852] font-abc text-[12px]">Total</span><span className="text-[#3C4852] ml-[10px] mt-[1px%] font-abc text-[16px] font-semibold"> ₹99</span><br></br>
                      
